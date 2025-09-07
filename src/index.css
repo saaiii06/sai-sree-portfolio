@@ -1,0 +1,293 @@
+/* Responsive tweaks for mobile and tablet */
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .skill-card, .project-card, .achievement-card, .education-card, .about-card, .bg-card {
+    padding: 1rem !important;
+    border-radius: 0.75rem !important;
+  }
+  .max-w-6xl, .max-w-4xl, .max-w-2xl {
+    max-width: 100vw !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .grid-cols-1, .md\:grid-cols-2, .lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .flex-row, .sm\:flex-row, .lg\:flex-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  .gap-8, .gap-6, .gap-4 {
+    gap: 1rem !important;
+  }
+  .px-4, .sm\:px-6, .lg\:px-8 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .py-20, .py-8 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  .rounded-xl, .rounded-lg {
+    border-radius: 0.75rem !important;
+  }
+  .text-2xl, .text-3xl, .md\:text-4xl {
+    font-size: 1.25rem !important;
+  }
+}
+.light footer.bg-card:hover {
+  box-shadow: none !important;
+}
+/* Gradient shadow hover for all cards in light theme */
+.light .bg-card:hover,
+.light .achievement-card:hover,
+.light .education-card:hover,
+.light .about-card:hover {
+  box-shadow:
+    0 4px 32px 0 hsl(263,70%,65%,0.22),
+    0 2px 16px 0 hsl(196,100%,47%,0.18),
+    0 0 0 2px hsl(var(--primary)/.22);
+}
+  .skill-card {
+    @apply bg-card rounded-xl p-6 border border-border shadow-[0_2px_12px_0_rgba(0,0,0,0.10)] hover:border-primary/30 dark:border-2;
+    @apply transition-all duration-300 hover:scale-[1.02] transform;
+  }
+  .light .skill-card:hover {
+    box-shadow:
+      0 4px 32px 0 hsl(263,70%,65%,0.22),
+      0 2px 16px 0 hsl(196,100%,47%,0.18),
+      0 0 0 2px hsl(var(--primary)/.22);
+  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Dark Theme Focus */
+
+@layer base {
+  :root {
+    /* Dark theme as primary (matching reference design) */
+    --background: 220 13% 9%;
+    --foreground: 220 9% 95%;
+
+    --card: 220 13% 11%;
+    --card-foreground: 220 9% 95%;
+
+    --popover: 220 13% 11%;
+    --popover-foreground: 220 9% 95%;
+
+    --primary: 263 70% 65%;
+    --primary-foreground: 220 9% 95%;
+
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 220 9% 90%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 196 100% 47%;
+    --accent-foreground: 220 13% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 9% 95%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 15%;
+    --ring: 263 70% 65%;
+
+    --radius: 0.75rem;
+
+    /* Portfolio specific design tokens */
+    --gradient-purple: linear-gradient(135deg, hsl(263 70% 65%), hsl(280 80% 55%));
+    --gradient-blue: linear-gradient(135deg, hsl(196 100% 47%), hsl(220 100% 60%));
+    --gradient-orange: linear-gradient(135deg, hsl(25 95% 53%), hsl(45 93% 47%));
+    --gradient-project: linear-gradient(135deg, hsl(263 70% 65% / 0.8), hsl(196 100% 47% / 0.8));
+    
+    --shadow-glow: 0 0 30px hsl(263 70% 65% / 0.3);
+    --shadow-card: 0 4px 20px hsl(220 13% 5% / 0.4);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* Typography scale */
+    --font-heading: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+  --background: 220 13% 9%;
+  --foreground: 220 9% 95%;
+  --card: 220 13% 11%;
+  --card-foreground: 220 9% 95%;
+  --popover: 220 13% 11%;
+  --popover-foreground: 220 9% 95%;
+  --primary: 263 70% 65%;
+  --primary-foreground: 220 9% 95%;
+  --secondary: 220 13% 15%;
+  --secondary-foreground: 220 9% 90%;
+  --muted: 220 13% 15%;
+  --muted-foreground: 220 9% 60%;
+  --accent: 196 100% 47%;
+  --accent-foreground: 220 13% 9%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 220 9% 95%;
+  --border: 220 13% 20%;
+  --input: 220 13% 15%;
+  --ring: 263 70% 65%;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 0 0% 100%; /* white */
+    --foreground: 220 9% 15%; /* dark gray */
+    --card: 0 0% 100%;
+    --card-foreground: 220 9% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 9% 15%;
+    --primary: 263 70% 65%; /* keep purple for gradient */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 95%; /* very light gray */
+    --secondary-foreground: 220 9% 15%;
+    --muted: 220 13% 90%;
+    --muted-foreground: 220 9% 40%;
+    --accent: 196 100% 47%;
+    --accent-foreground: 220 9% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 70%;
+    --input: 220 13% 95%;
+    --ring: 263 70% 65%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 9% 15%;
+    --sidebar-primary: 263 70% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 196 100% 47%;
+    --sidebar-accent-foreground: 220 9% 15%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 263 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  /* Portfolio specific components */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .gradient-border {
+    @apply relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg bg-gradient-to-r from-primary to-accent p-[1px];
+    z-index: -1;
+  }
+  
+  .gradient-border > * {
+    @apply bg-background rounded-lg;
+  }
+
+  .project-card {
+  @apply bg-card rounded-xl p-6 border border-border shadow-[0_2px_12px_0_rgba(0,0,0,0.10)] hover:border-primary/30 dark:border-2;
+  @apply transition-all duration-300 hover:scale-[1.02] transform;
+}
+.light .project-card:hover {
+  box-shadow:
+    0 4px 32px 0 hsl(263,70%,65%,0.22),
+    0 2px 16px 0 hsl(196,100%,47%,0.18),
+    0 0 0 2px hsl(var(--primary)/.22);
+  }
+
+  .tech-icon {
+    @apply w-12 h-12 rounded-lg flex items-center justify-center;
+    @apply bg-gradient-to-br from-primary/20 to-accent/20;
+    @apply border border-primary/30 hover:border-primary/50;
+    @apply transition-all duration-300 hover:scale-110;
+  }
+
+  .nav-link {
+    @apply relative px-4 py-2 rounded-lg transition-all duration-300;
+    @apply hover:bg-primary/10 hover:text-primary;
+  }
+
+  .nav-link.active {
+    @apply bg-primary/20 text-primary;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-accent text-white;
+    @apply px-6 py-3 rounded-lg font-medium;
+    @apply hover:shadow-[var(--shadow-glow)] transition-all duration-300;
+    @apply hover:scale-105 transform;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-primary/50 text-primary;
+    @apply px-6 py-3 rounded-lg font-medium;
+    @apply hover:bg-primary/10 hover:border-primary transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
