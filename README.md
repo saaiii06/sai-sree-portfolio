@@ -45,5 +45,6 @@ You can deploy this project to any static hosting provider (Vercel, Netlify, Git
 
 Made with ❤️ by Sai Sree
 
-[![Hits](https://hits.sh/saaiii06/sai-sree-portfolio.svg?style=flat-square&label=Repo%20Views)](https://hits.sh/saaiii06/sai-sree-portfolio/)
+
+[![Hits](https://hits.sh/github.com/saaiii06/sai-sree-portfolio.svg?style=flat-square&label=Repo%20Views)](https://hits.sh/github.com/saaiii06/sai-sree-portfolio/)
 
