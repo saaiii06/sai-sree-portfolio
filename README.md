@@ -45,5 +45,5 @@ You can deploy this project to any static hosting provider (Vercel, Netlify, Git
 
 Made with ❤️ by Sai Sree
 
-![Repo Views](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Repo%20views&query=value&url=https://api.countapi.xyz/hit/saaiii06.sai-sree-portfolio.visits)
+[![Hits](https://hits.sh/saaiii06/sai-sree-portfolio.svg?style=flat-square&label=Repo%20Views)](https://hits.sh/saaiii06/sai-sree-portfolio/)
 
