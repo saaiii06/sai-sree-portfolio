@@ -3,7 +3,7 @@
 
 # Sai Sree's Portfolio
 
-[![Hits](https://hits.sh/github.com/saaiii06/sai-sree-portfolio.svg?style=flat-square&label=Repo%20Views)](https://hits.sh/github.com/saaiii06/sai-sree-portfolio/)
+[![Hits](https://hits.sh/github.com/saaiii06/sai-sree-portfolio.svg?style=for-the-badge&label=Repo%20Views&color=97ca00)](https://hits.sh/github.com/saaiii06/sai-sree-portfolio/)
 
 This is my personal portfolio website to showcase my projects, skills, achievements, and experience.
 
